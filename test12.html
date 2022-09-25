@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "utf-8">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+        <style type = "text/css">
+            ul{
+                width: 200px;
+                border : 1px solid gray;
+            }
+            a{
+                text-decoration: none;
+                color: black;
+            }
+        </style>
+    </head> 
+    <body>
+        <ul class="fruit"></ul>
+        <ul class="book"></ul>
+        <script>
+            var fruits =["西瓜","香蕉","芭樂","水蜜桃"]
+            for( var i = 0 ; i < fruits.length ; i ++){
+                $("ul.fruit").append("<li>"+ fruits[i] +"</li>")
+            }
+            var discount = 0.8
+            var books_all = [
+                {
+                    name: "java",
+                    price: 350,
+                    discount:true
+                },{
+                    name: "c++",
+                    price: 450,
+                    discount:false
+                },{
+                    name: "javascript",
+                    price: 320,
+                    discount:false
+                }
+            ]
+            console.log(books_all);
+
+            var nowbook;
+            for(var i = 0; i < books_all.length;i++){
+                nowbook = books_all[i];
+                //console.log(nowbook);
+                if(nowbook.discount){
+                    console.log(nowbook.name + "在特價" + nowbook.price*discount + "元")
+                }else{
+                    console.log(nowbook.name + "原價" + nowbook.price*discount + "元")
+                }
+            }
+            
+        </script>
+ 
+    </body>
+
+
+</html>

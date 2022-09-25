@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "utf-8">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+        <style type = "text/css">
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            li{
+                list-style: none;
+                margin-right: 5px;
+                float: left;
+            }
+            a{
+                padding: 20px;
+                background: gray;
+                color:white;
+                float: left;
+                text-decoration: none;
+            }
+            .active a{
+                background-color: red;
+            }
+        </style>
+    </head>
+    <body>
+  
+        <script>
+            var obt1 = ["sb","is","me"];
+            while(obt1.length>0){
+                console.log(obt1);
+                obt1.pop();
+
+            }
+            var books_all = [
+                {
+                    name: "飢餓遊戲",
+                    price: 350
+                },{
+                    name: "星火燎原",
+                    price: 450
+                },{
+                    name: "自由幻夢",
+                    price: 320
+                }
+            ]
+            books_all.push({
+                name: "新書",
+                price: 500 
+            })
+            for(var i = 0; i < books_all.length ; i++){
+                console.log(books_all[i].name +"是"+ books_all[i].price +"元")
+            }
+            console.log(i)//重要
+
+            
+
+        </script>
+ 
+    </body>
+
+
+</html>

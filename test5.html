@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "utf-8">
+        <style type = "text/css">
+            #bt1,#bt2{
+                width: 30px;
+                height: 30px;
+                font-size: 30px;
+                border: solid 1px;
+                text-align: center;
+                float: left;
+                margin: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id = "bt1">+</div>
+        <div id = "bt2">-</div>
+        <p id = "content" style = "font-size:20px">不努力就只能賣保險</p>
+        <script>
+            var text = document.getElementById("content");
+            var bt1 = document.getElementById("bt1");
+            var bt2 = document.getElementById("bt2");
+            var size = 16;
+            bt1.onclick = function(){
+                size ++;
+                console.log(size)
+                text.style.fontSize = size + "px";//把-去掉後面字大寫這是抓font-size js不出現-
+            }
+            bt2.onclick = function(){
+                size --;
+                console.log(size)
+                text.style.fontSize = size + "px";
+            }
+            rel_text = text.innerHTML
+
+        </script>
+ 
+    </body>
+
+
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+        <meta charset = "utf-8">
+        <style type = "text/css">
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            a{
+                padding: 20px;
+                background: gray;
+                color:white;
+                float: left;
+                text-decoration: none;
+            }
+            .active a{
+                background-color: red;
+            }
+            .highlight{
+                background-color: yellow;
+                color: black ;
+            }
+        </style>
+    </head>     
+    <body>
+        
+        <h2 class = "hightlight">123</h2>
+        <ul></ul>
+        <script type ="text/javascript">
+            //$("h2").text("新文字");
+            //$("h2").css("color","red");
+            //$("h2").addClass("highlight");
+            //$("h2").removeClass("highlight");
+            //$("h2").html("<a href = 'http://www.google.com'>google</a>");
+            $("h2").append("$");//家在後面
+            $("h2").prepend("NT");//家在前面
+            var books = [];
+            //books[0] = "飢餓遊戲";
+            //books[1] = "星火燎原";
+            //books[2] = "自由幻夢";
+            //document.write(books);
+            var books = ["飢餓遊戲", "星火燎原","自由幻夢"];
+            document.write(books);
+            console.log(books);
+            books.reverse();//反轉
+            console.log(books);
+            console.log(books.length);
+            document.write(books);
+
+            books.pop();//拿走最後面那個值
+            console.log(books);
+            document.write(books);
+            $("ul").html("");
+            $("ul").append("<li>" + books[0] + "</li>");
+            $("ul").append("<li>" + books[1] + "</li>");
+            $("ul").append("<li>" + books[2] + "</li>");
+            var store = {
+                name: "快樂書店",
+                phone: "0987215374",
+                adress: "台北市北投區致遠二路"
+            };
+            //store["name"] = "快樂書店"
+            //store["phone"] = "0987215374"
+            //store["adress"] = "台北市北投區致遠二路"
+            console.log(store);
+            var book1 = ["a","b"]
+            var book2 = ["c","d"]
+            book1 =book1.concat(book2);
+            console.log(book1);
+            var books_all = [
+                {
+                    name: "飢餓遊戲",
+                    price: 350
+                },{
+                    name: "星火燎原",
+                    price: 450
+                },{
+                    name: "自由幻夢",
+                    price: 320
+                }
+            ]
+            console.log(books_all);
+            console.log(books_all[0]);
+
+            var shop = {
+                name: "蝦皮",
+                items: [
+                    {
+                        name: "辣椒醬",
+                        price: 300
+                    },
+                    {
+                        name: "小魚乾辣椒",
+                        price: 200
+                    }
+                ]
+            }
+            console.log(shop);
+
+        </script>
+        
+    </body>
+    
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "utf-8">
+        <style type = "text/css">
+
+        </style>
+    </head>
+    <body>
+        <input type="text" id ="text1">
+        <input type="text" id ="text2">
+        <input type="text" id ="text3">
+        <input type="button" id ="bt1" value = "加法">
+        <input type="button" id ="bt2" value = "減法">
+        <input type="button" id ="bt3" value = "乘法">
+        <input type="button" id ="bt4" value = "除法">
+        <input type="button" id ="bt5" value = "取餘">
+        <script>
+            var otext1 = document.getElementById("text1");
+            var otext2 = document.getElementById("text2");
+            var otext3 = document.getElementById("text3");
+            var obtn1 = document.getElementById("bt1");
+            var obtn2 = document.getElementById("bt2");
+            var obtn3 = document.getElementById("bt3");
+            var obtn4 = document.getElementById("bt4");
+            var obtn5 = document.getElementById("bt5");
+
+            obtn1.onclick = function(){
+                var num1 = Number(otext1.value);
+                var num2 = Number(otext2.value);
+                otext3.value = num1 +num2;
+            }
+            obtn2.onclick = function(){
+                var num1 = Number(otext1.value);
+                var num2 = Number(otext2.value);
+                otext3.value = num1 -num2;
+            }
+            obtn3.onclick = function(){
+                var num1 = Number(otext1.value);
+                var num2 = Number(otext2.value);
+                otext3.value = num1 *num2;
+            }
+            obtn4.onclick = function(){
+                var num1 = Number(otext1.value);
+                var num2 = Number(otext2.value);
+                otext3.value = num1 /num2;
+            }
+            obtn5.onclick = function(){
+                var num1 = Number(otext1.value);
+                var num2 = Number(otext2.value);
+                otext3.value = num1 %num2;
+            }
+        </script>
+ 
+    </body>
+
+
+</html>

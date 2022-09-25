@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "utf-8">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+        <style type = "text/css">
+            html,body{
+                font-family: "微軟正黑體";
+            }
+            .hightlight{
+                background-color: yellow;
+                padding: 2px 5px;
+            }
+            ul#book{
+                display: flex;
+            }
+            li{
+                list-style: none;
+                padding: 10px;
+            }
+        </style>
+    </head> 
+    <body>
+
+        <ul id="book"></ul>
+        <script>
+            var bookdata = [
+            {
+                name:"失落的符號",
+                price:300,
+                content:"人類失去的語言",
+                discouny:0.7
+            }
+            ,
+            {
+                name:"王者天下",
+                price:320,
+                content:"奪取王位",
+                discouny:0.9
+            }
+            ,
+            {
+                name:"c++",
+                price:820,
+                content:"程式語言",
+                discouny:0.9
+            }
+            ]
+            function highlightText(text,word){
+                var replaceexp = new RegExp("("+word+")","g");
+                return text.replace(replaceexp,"<span class ='hightlight'>$1</span>");
+            }
+            function showbook(book){
+                var item = $("<li>")
+                var price = book.price; 
+                var texthight = highlightText(book.content.slice(0,6),"人")
+                item.append("<h2>"+book.name+"</h2>")
+                item.append("<p>"+texthight+"</p>")
+                item.append("<p>"+"價格:"+ price + "元</p>")
+            
+                $("ul#book").append(item)
+            }
+            function out(bookdata = []){
+                for(let i = 0; i < bookdata.length;i++){
+                    showbook(bookdata[i]);
+
+                }
+            }
+            out(bookdata);
+        </script>
+ 
+    </body>
+
+
+</html>

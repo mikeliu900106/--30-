@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "utf-8">
+        <style type = "text/css">
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            li{
+                list-style: none;
+                margin-right: 5px;
+                float: left;
+            }
+            a{
+                padding: 20px;
+                background: gray;
+                color:white;
+                float: left;
+                text-decoration: none;
+            }
+            .active a{
+                background-color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <ul>
+            <li class = "active" id ="bt1"><a href="#">娛樂</a></li>
+            <li id ="bt2"><a href="#">財經</a></li>
+            <li id ="bt3"><a href="#">體育</a></li>
+        </ul>
+        <script>
+            var obt1 = document.getElementById('bt1');
+            var obt2 = document.getElementById('bt2');
+            var obt3 = document.getElementById('bt3');
+            var tempt = obt1;
+            obt1.onclick = function(){
+                tempt.className ="";
+                tempt = obt1;
+                tempt.className = 'active';    
+            }
+            obt2.onclick = function(){
+                tempt.className ="";
+                tempt = obt2;
+                tempt.className = 'active';
+            }
+            obt3.onclick = function(){
+                tempt.className ="";
+                tempt = obt3;
+                tempt.className = 'active';
+            }
+            alert(null == undefined)
+        </script>
+ 
+    </body>
+
+
+</html>

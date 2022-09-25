@@ -1,0 +1,114 @@
+$colorOrange: #E55A54
+$colorBlue: #0c4475
+
+@mixin size($w,$h:$w)
+    width: $w
+    height: $h
+
+@mixin flexCenter
+    display: flex
+    justify-content: center
+    align-items: center
+
+html,body
+    margin: 0
+    padding: 0
+    +size(100%)
+    background-color: $colorOrange
+    +flexCenter
+    font-family: "微軟正黑體"
+
+*
+    //border:1px solid
+
+.monster
+    +size(110px)
+    cursor: pointer
+    margin: 10px
+    background-color: $colorOrange
+    border-radius: 20px
+    box-shadow: 0PX 10PX 20PX rgba(black,0.2)
+    +flexCenter
+    flex-direction: column
+    position: relative
+    .eye
+        +size(40%)
+        border-radius: 50%
+        background-color: #fff
+        +flexCenter
+    .eyeball
+        +size(50%)
+        border-radius: 50%
+        background-color: $colorBlue
+    .mouth
+        +size(32%,12px)
+        background-color: white
+        border-radius: 12px
+        margin-top: 15%
+    &.blue
+        background: $colorBlue
+        .mouth,.eyeball
+            background-color: $colorOrange
+    @keyframes jumping
+        50%
+            top: 0
+            box-shadow: 0PX 10PX 20PX rgba(black,0.2)
+            // 第一個是x距離第二個是y第三個是模糊程度
+        100%
+            top: -50px
+            box-shadow: 0PX 120PX 50PX rgba(black,0.2)
+    animation: jumping 0.8s infinite alternate
+
+    @keyframes eyemove
+        0%,10%
+            transform: translate(50%)//向右移動50%       
+        90%,100%
+            transform: translate(-50%)    
+    .eyeball
+        animation: eyemove 1.6s infinite alternate
+    // &::before,&:after
+    //     content: ""
+    //     display: block
+    //     +size(20%,10px)
+    //     background-color: #fff
+    //     position: absolute
+    //     left: 50%
+    //     top: -10px
+    // &:before
+    //     transform: translateX(-70%)
+    //     rotate(45deg)
+    // &:after
+    //     transform: translateX(-30%)
+    //     rotate(-45deg)
+.h2
+    color: white
+    font-size: 40px 
+    margin-right: 50px
+.h3
+    margin-top: 0
+    opacity: 0.5//透明度
+    color: white
+.pageLoading
+    position: fixed
+    +size(100%)
+    background-color: $colorBlue
+    left: 0
+    top: 0
+    +flexCenter
+    flex-direction: column//由上往下排序  
+    transition: 0.5s//轉場
+    transition-delay: 0.5s
+    &.complete
+        opacity: 0  //透明
+    .monster
+        transform: scale(0.01) rotate(360deg)
+.loading
+    +size(200px,8px)
+    background-color: #fff
+    margin-top: 80px
+    border-radius: 4px
+
+    .bar
+        background-color: $colorOrange
+        +size(0%,100%)
+        border-radius: 4px

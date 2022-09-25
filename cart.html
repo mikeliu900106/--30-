@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JavaScript ES5</title>
+    <meta charset="utf-8" />
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="/js/account.js"></script>
+</head>
+
+<body>
+    <h1>Log in</h1>
+    <form>
+        <label>
+            E-mail
+            <input type="email" id="user_email" />
+        </label><br />
+        <label>
+            Password
+            <input type="password" id="user_password" />
+            <br /><small style="color: red;" id="password-warning"></small>
+        </label><br />
+        <button id="submit-button" type="submit" disabled>登入</button>
+    </form>
+    <br />
+    <a href="/signup.html">Sign up</a>
+    <script>
+        var keep = null
+        function doSomething(){
+            var _result = 0
+            if(!keep){
+                keep = function doprivate(){
+                    _result+=1
+                    console.log("after doprivate" + _result)
+                }
+            }
+            console.log("var:" + _result)
+            keep()
+        }
+        doSomething();
+
+
+
+        /*
+        var signIn = account;
+        signIn.init();
+        var _result = null
+        function Cart(prices){
+            this.prices = prices,
+            this.amount = function () {
+                if (_ressult) {
+                    return _ressult
+                }   
+    
+                for (var index = 0; index < this.prices.length; index++) {
+                    _ressult += this.prices[index]
+                }
+                return _ressult
+            },
+            this.showAmount = function () {
+                console.log(this.amount())
+            }
+        }
+        /*function Cart(prices){
+            return{
+                prices: prices,
+
+                amount: function () {
+                    if (_ressult) {
+                        return _ressult
+                    }   
+    
+                    for (var index = 0; index < this.prices.length; index++) {
+                        _ressult += this.prices[index]
+                    }
+                    return _ressult
+                },
+                showAmount: function () {
+                    console.log(this.amount())
+                }
+            }
+        } -->
+
+/*
+        var cart1 = Cart([1,2])
+        var cart2 = Cart([12,8,5])
+   
+        cart1.showAmount();
+        cart2.showAmount();
+        
+        var cart = new User()
+        cart.showAmount();
+        function User(){
+
+        }
+        console.log(new User)
+        */
+    </script>
+</body>
+
+</html>

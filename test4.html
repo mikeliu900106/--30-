@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "utf-8">
+        <style type = "text/css">
+            .box{
+                width: 100px;
+                height: 100px;
+                border : 1px solid gray;
+                text-align: center;
+            }
+            #bt{
+                width: 50px;
+                height: 30px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class = "box">
+            <h3 id = "text" >0</h3>
+            <input type="button" value ="按我" id = "bt" class = "bt">
+        </div>
+        <script>
+            var nc = document.getElementById("text");
+            var bt = document.getElementById("bt");
+            var index = 0;
+            bt.onclick = function(){
+                index = index + 1;
+                alert(index);
+                nc.innerHTML = index;
+            }
+
+        </script>
+ 
+    </body>
+
+
+</html>
